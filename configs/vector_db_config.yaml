@@ -1,0 +1,11 @@
+vector_db:
+  engine: "Qdrant"
+  host: "localhost"
+  port: 6333
+  collection_name: "nexus_multimodal_assets"
+  vector_size: 1536  # Optimized for Open AI / Llama Embedding
+  distance_metric: "Cosine"
+  hnsw_config:
+    m: 16
+    ef_construct: 128
+    full_scan_threshold: 10000

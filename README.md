@@ -1,44 +1,54 @@
-\# Lobster Edge Nexus
+\# Lobster-Edge-Nexus
 
 
 
-Lobster Edge Nexus 是一個專為「極致隱私」與「大規模非結構化數據」設計的分散式多模態向量檢索系統。本專案旨在將邊緣運算的效能發揮至極致，實現完全不依賴雲端的在地化 AI 智能中樞。
+\*\*High-Performance Privacy-Centric Distributed Vector Search Engine\*\*
 
 
 
-\## 核心技術架構
-
-\- \*\*Vector Database:\*\* Qdrant (HNSW Indexing)
-
-\- \*\*LLM Engine:\*\* Llama-3-70B (via vLLM / Ollama)
-
-\- \*\*Embedding Model:\*\* Multimodal-CLIP / Whisper-v3
-
-\- \*\*Data Security:\*\* AES-256 Vault-layer Encryption
+Lobster-Edge-Nexus 是一套專為邊緣運算環境設計的數據中樞，旨在利用極致的硬體性能實現大規模非結構化數據的在地化語義檢索。
 
 
 
-\## 為什麼選擇 HP ZGX Nano?
+\## 🚀 專案願景 (Project Vision)
 
-本專案在研發過程中面臨嚴重的 \*\*記憶體瓶頸\*\*：
-
-1\. \*\*128GB 統一記憶體需求：\*\* 百萬級別的高維度向量索引 (1536-dim) 需完全駐留於記憶體中以達成 <30ms 的檢索延遲。
-
-2\. \*\*Blackwell 算力壓榨：\*\* 需要 1,000 TOPS 的算力支撐即時的多模態嵌入 (Embedding) 與全精度 LLM 推理，解決目前消費級硬體在並發處理時的 Swap 延遲問題。
+在不依賴雲端算力的前提下，透過 \*\*HP ZGX Nano (NVIDIA Blackwell)\*\* 的強大算力與 \*\*128GB 統一記憶體\*\*，構建一個具備毫秒級響應速度的「私有數位資產保險箱」。
 
 
 
-\## 測試計畫 (Roadmap)
+\## 🛠 技術棧 (Tech Stack)
 
-\- \[ ] \*\*Phase 1:\*\* 部署 Qdrant 容器並進行百萬級數據載入壓測。
+\- \*\*Vector Engine:\*\* Qdrant (Targeting 1M+ Vector Indexing)
 
-\- \[ ] \*\*Phase 2:\*\* 驗證 Llama-3-70B 在 ZGX Nano 上的推理 TPS 表現。
+\- \*\*Inference Frame:\*\* vLLM / Ollama (Optimized for Blackwell Architecture)
 
-\- \[ ] \*\*Phase 3:\*\* 優化 Vault 加密層與 AI 運算層的 I/O 調度。
+\- \*\*LLM Backbone:\*\* Llama-3-70B (Full-precision/Quantized testing)
+
+\- \*\*Data Security:\*\* AES-256 AES-NI accelerated encryption layer
 
 
 
-\## 免責聲明與隱私
+\## 📈 為什麼需要 HP ZGX Nano? (Hardware Requirement)
 
-本專案僅用於學術研究與個人數位資產管理，所有數據處理流程均遵循在地化原則，確保用戶數據絕對安全。
+本專案的測試核心在於解決 \*\*記憶體與算力的非對稱性\*\*：
+
+1\. \*\*Memory Density:\*\* 處理百萬級 1536-dim 向量時，傳統 24GB/64GB 環境會因 Swap 導致推理延遲。128GB LPDDR5x 統一記憶體可支持模型權重與向量索引全量駐留。
+
+2\. \*\*Compute Throughput:\*\* 1,000 TOPS (FP4) 算力將用於壓測並發多模態 Embedding 處理，這是實現「即時資產索引」的關鍵。
+
+
+
+\## 📊 測試指標 (Target KPI)
+
+\- \*\*Indexing Speed:\*\* > 5,000 items/sec (Multimodal embedding)
+
+\- \*\*Query Latency:\*\* < 30ms for 1M+ vector database
+
+\- \*\*Inference Speed:\*\* > 15 tokens/sec for Llama-3-70B (INT8)
+
+
+
+---
+
+\*This project is currently being prepared for the HP AI Innovation Challenge.\*
 
