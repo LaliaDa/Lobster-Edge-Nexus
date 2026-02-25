@@ -52,3 +52,7 @@ Lobster-Edge-Nexus 是一套專為邊緣運算環境設計的數據中樞，旨�
 
 \*This project is currently being prepared for the HP AI Innovation Challenge.\*
 
+## 📝 Change Log
+- **2026-02-25:** Added `hardware_monitor.py` for VRAM tracking.
+- **2026-02-25:** Optimized `quantization_params.yaml` for Blackwell architecture.
+- **Next Step:** Implementing HNSW index pre-loading logic.
