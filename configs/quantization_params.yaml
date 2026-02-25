@@ -1,0 +1,7 @@
+(
+echo model_optimization:
+echo   quantization_level: "INT8" # Optimized for Llama-3-70B on Blackwell
+echo   use_fp4_engine: true        # Target specific feature for ZGX Nano
+echo   kv_cache_scaling: 1.5
+echo   max_batch_size: 32
+) > configs/quantization_params.yaml
