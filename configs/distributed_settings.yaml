@@ -1,0 +1,9 @@
+distributed_config:
+  strategy: "consistent_hashing"
+  replication_factor: 2
+  shard_count: 8
+  nodes:
+    - name: "ZGX-Nano-Primary"
+      role: "Master"
+    - name: "Edge-Node-01"
+      role: "Worker"
