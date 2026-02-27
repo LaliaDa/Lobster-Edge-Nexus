@@ -1,0 +1,8 @@
+multimodal_config:
+  enable_cross_modal: true
+  vision_model: "clip-vit-large-patch14"
+  # 針對 ZGX Nano 128GB 的硬體參數最佳化
+  vram_optimization:
+    tensor_precision: "FP8"  # 利用 Blackwell 的低精度高吞吐特性
+    max_batch_size: 128
+    preload_to_memory: true
