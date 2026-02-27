@@ -20,4 +20,4 @@ class MultimodalProcessor:
 
     def fuse_features(self, text_vec, img_vec):
         """特徵融合邏輯，準備進行後續的向量檢索"""
-        return np.concatenate([text_vec, img_vec], axis=1)
+        return np.concatenate([text_vec, img_vec], axis=1) 
